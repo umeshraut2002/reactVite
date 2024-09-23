@@ -1,7 +1,50 @@
-import { useState } from "react";
+import { useState, useCallback , useEffect, useRef} from "react";
 import "./App.css";
 
 function App() {
+
+  //  lets create a state first 
+
+  const [length, setLength] =useState(8);
+  const [numbers, allowNumbers] = useState(false);
+  const [uppercases, allowUppercase] = useState(false);
+  const [symbol, allowSymbol] = useState(false);
+  const [password, setPassword] = useState("");
+  const passRef = useRef()
+
+  const passGenenrator = useCallback(() => {
+    let pass ="";
+    let str = "abcdefghijklmnopqrstuvwxyz";
+
+    if(numbers){
+      str += "0123456789";
+    }
+
+    if(uppercases){
+      str += "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+    }
+
+    if(symbol){
+      str += "~!@#$%^&*()_+{}|:?/<>";
+    }
+
+    for(let i = 1; i <= length; i++){
+      let char = Math.floor(Math.random() * str.length);
+      pass += str.charAt(char)
+    }
+
+    setPassword(pass);
+
+  },[length, numbers, uppercases, symbol, setPassword]);
+
+  const passCopy = useCallback(() => {
+    passRef.current?.select()
+    window.navigator.clipboard.writeText(password);
+  },[password])
+
+  useEffect(() => {
+    passGenenrator();
+  }, [length, numbers, uppercases, symbol, setPassword])
 
   return (
     <>
@@ -17,12 +60,15 @@ function App() {
             </label>
             <input
               id="passwordLength"
-              type="number"
-              min="1"
-              max="30"
+              type="range"
+              min="8"
+              max="50"
               placeholder="8"
-              className="mt-1 block w-full px-3 py-2 bg-gray-700 border border-gray-600 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 text-gray-200 placeholder-gray-500 sm:text-sm"
+              value={length}
+              className=" cursor-pointer mt-1 block w-full px-3 py-2 bg-gray-700 border border-gray-600 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 text-gray-200 placeholder-gray-500 sm:text-sm"
+              onChange={(e) => {setLength(e.target.value)}}
             />
+            <label>Length: {length}</label>
           </div>
 
           {/* <!-- Checkboxes for Options --> */}
@@ -30,14 +76,18 @@ function App() {
             <div className="flex items-center mb-4">
               <input
                 type="checkbox"
+                checked = {uppercases}
                 id="uppercase"
                 className="focus:ring-indigo-500 h-4 w-4 text-indigo-600 bg-gray-700 border-gray-600 rounded"
+                onChange ={() =>{
+                  allowUppercase((prev) => !prev);
+                }}
               />
               <label
                 className="ml-2 block text-sm text-gray-400"
                 htmlFor="uppercase"
               >
-                Include Uppercase Letters
+                Uppercase
               </label>
             </div>
 
@@ -45,13 +95,17 @@ function App() {
               <input
                 type="checkbox"
                 id="numbers"
+                checked = {numbers}
                 className="focus:ring-indigo-500 h-4 w-4 text-indigo-600 bg-gray-700 border-gray-600 rounded"
+                onChange={()=> {
+                  allowNumbers((prev)=> !prev)
+                }}
               />
               <label
                 className="ml-2 block text-sm text-gray-400"
                 htmlFor="numbers"
               >
-                Include Numbers
+                Numbers
               </label>
             </div>
 
@@ -59,20 +113,23 @@ function App() {
               <input
                 type="checkbox"
                 id="symbols"
+                checked = {symbol}
                 className="focus:ring-indigo-500 h-4 w-4 text-indigo-600 bg-gray-700 border-gray-600 rounded"
+                onChange={() => {
+                  allowSymbol((prev) => !prev) 
+                }}
               />
               <label
                 className="ml-2 block text-sm text-gray-400"
                 htmlFor="symbols"
               >
-                Include Symbols
+                Symbols
               </label>
             </div>
           </div>
 
-          {/* <!-- Generate Button --> */}
           <div className="mt-6">
-            <button className="w-full px-4 py-2 bg-indigo-600 text-white font-medium rounded-md shadow-sm hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500">
+            <button onClick={passGenenrator} className="w-full px-4 py-2 bg-indigo-600 text-white font-medium rounded-md shadow-sm hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500">
               Generate Password
             </button>
           </div>
@@ -81,6 +138,7 @@ function App() {
           <div className="mt-6">
             <input
               type="text"
+              value={password}
               placeholder="Generated password will appear here"
               readOnly
               className="w-full px-4 py-2 bg-gray-700 border border-gray-600 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 text-gray-200 placeholder-gray-500 sm:text-sm"
@@ -89,7 +147,7 @@ function App() {
 
           {/* <!-- Copy to Clipboard Button --> */}
           <div className="mt-4">
-            <button className="w-full px-4 py-2 bg-green-500 text-white font-medium rounded-md shadow-sm hover:bg-green-600 focus:outline-none focus:ring-2 focus:ring-green-400">
+            <button onClick={passCopy} className="w-full px-4 py-2 bg-green-500 text-white font-medium rounded-md shadow-sm hover:bg-green-600 focus:outline-none focus:ring-2 focus:ring-green-400">
               Copy to Clipboard
             </button>
           </div>
