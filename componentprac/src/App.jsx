@@ -7,6 +7,8 @@ import Greeting from './components/greeting'
 import ProductList from './components/ProductList'
 import ListComponent from './components/ListsComponent'
 import ArrayComponent from './components/ArrayComponent'
+import Person from './components/Person'
+import Infos from './components/Infos'
 
 function App() {
 
@@ -15,10 +17,12 @@ function App() {
     <Navbar />
     <Massage />
     <Greeting />
+    <Infos />
     <ProductList />
     <ListComponent />
     <Maincontent />
     <ArrayComponent />
+    <Person />
     <Footer />
     </>
   )
