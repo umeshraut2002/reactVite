@@ -1,8 +1,8 @@
 import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
 import './App.css'
 import Main from './component/Main'
+import Random from './component/Random'
+import Logic from './component/Logic'
 
 function App() {
   const [count, setCount] = useState(0)
@@ -10,6 +10,8 @@ function App() {
   return (
     <>
     <Main />
+    <Random />
+    <Logic />
     </>
   )
 }

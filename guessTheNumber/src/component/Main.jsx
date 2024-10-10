@@ -1,4 +1,4 @@
-import React from 'react'
+import {useState} from 'react'
 
 const Main = () =>{
     return (
@@ -9,7 +9,7 @@ const Main = () =>{
                 </div>
 
                 <div className='flex items-center m-14' >
-                    <input type='text' placeholder='Enter Number Here' className='p-2 uppercase w-60 h-14 m-15' />
+                    <input type='number' placeholder='Enter Number Here' className='p-2 uppercase w-60 h-14 m-15' />
                     <button className='m-5 uppercase border-white'>Check</button>
                 </div>
 
