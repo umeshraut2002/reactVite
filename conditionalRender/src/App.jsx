@@ -13,7 +13,7 @@ function App() {
     <>
     <Weather tempreture={(Math.floor(Math.random() * 100) + 1)}/>
     <UserStatus isLoggedIn={true} isAdmin={false}/>
-    <Greeting timeOfDay={"morning"} />
+    <Greeting timeOfDay={"afternoon"} />
     </>
   )
 }
