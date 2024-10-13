@@ -4,6 +4,7 @@ import viteLogo from '/vite.svg'
 import './App.css'
 import Counter from './componenets/Counter'
 import Friends from './componenets/Friends'
+import Movies from './componenets/Movies'
 
 function App() {
   const [count, setCount] = useState(0)
@@ -12,6 +13,7 @@ function App() {
     <>
       <Counter />
       <Friends />
+      <Movies />
     </>
   )
 }

@@ -16,7 +16,7 @@ const Friends = () => {
     }
 
     return(
-        <>
+        <div>
             {frnd.map(f => (
                 <li key={Math.random()}>{f}</li>
             ))} 
@@ -24,7 +24,7 @@ const Friends = () => {
             <button onClick={handleClick}>Add New Friends</button>
             <button onClick={removeFrnd}>Remove Friend</button>
             <button onClick={updateFrnd}>Update</button>
-        </>
+        </div>
     )
 }
 
