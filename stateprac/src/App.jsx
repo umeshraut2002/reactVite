@@ -1,10 +1,10 @@
 import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
 import './App.css'
 import Counter from './componenets/Counter'
 import Friends from './componenets/Friends'
 import Movies from './componenets/Movies'
+import ComponentOne from './componenets/ComponentOne'
+import ComponentTwo from './componenets/ComponentTwo'
 
 function App() {
   const [count, setCount] = useState(0)
@@ -14,6 +14,8 @@ function App() {
       <Counter />
       <Friends />
       <Movies />
+      <ComponentOne count={count} onClickHandler={() => setCount(count + 1)} />
+      <ComponentTwo count={count} onClickHandler={() => setCount(count + 2)} />
     </>
   )
 }
