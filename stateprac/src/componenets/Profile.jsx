@@ -2,10 +2,7 @@ import React, { useState } from "react";
 
 const Profile = () =>{
 
-    const [profile, setProfile] = useState({
-        name: '',
-        age: 0
-    });
+    const [profile, setProfile] = useState([]);
 
     const [name, setName] = useState("");
     const [age, setAge] =useState(0);
@@ -22,14 +19,12 @@ const Profile = () =>{
         <div>
         <h1>Profile Information</h1>
         <form onSubmit={handleSubmit}>
-        <input type="text" value={name} onChange={setName(e => e.target.value)} placeholder="Enter Name Here" ></input>
-        <button type="submit">Submit</button>
+        <input type="text" value={name} onChange={(e) => setName(e.target.value)} placeholder="Enter Name Here" ></input> <br />
         </form>
-        </div>
 
-        <div>
         <form onSubmit={handleSubmit}>
-            <input type="number" value={age} onChange={setAge(e.target.value)} placeholder="Enter Age Here" ></input>
+            <input type="number" value={age} onChange={(e) => setAge(e.target.value)} placeholder="Enter Age Here" ></input>
+
             <button type="submit">Submit</button>
         </form>
         </div>
@@ -39,6 +34,7 @@ const Profile = () =>{
         {profile.map((item, index) => (
             <li key={index}>
                 Name: {item.name}
+                <br />
                 Age: {item.age}
             </li>
         ))}
