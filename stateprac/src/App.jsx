@@ -7,6 +7,7 @@ import ComponentOne from './componenets/ComponentOne'
 import ComponentTwo from './componenets/ComponentTwo'
 import ToDoList from './componenets/ToDoList'
 import Atodolist from './componenets/Atodolist'
+import ShoppingCart from './componenets/ShoppingCart'
 
 function App() {
   const [count, setCount] = useState(0)
@@ -20,6 +21,7 @@ function App() {
       <ComponentTwo count={count} onClickHandler={() => setCount(count + 2)} />
       <ToDoList />
       <Atodolist />
+      <ShoppingCart />
     </>
   )
 }
