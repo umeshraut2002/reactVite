@@ -8,6 +8,7 @@ import ComponentTwo from './componenets/ComponentTwo'
 import ToDoList from './componenets/ToDoList'
 import Atodolist from './componenets/Atodolist'
 import ShoppingCart from './componenets/ShoppingCart'
+import Profile from './componenets/Profile'
 
 function App() {
   const [count, setCount] = useState(0)
@@ -22,6 +23,7 @@ function App() {
       <ToDoList />
       <Atodolist />
       <ShoppingCart />
+      <Profile />
     </>
   )
 }
