@@ -1,16 +1,39 @@
-import React from 'react';
+import React, { useState } from 'react';
 
 const Atodolist = () => {
     
+    const [todo, setTodo] = useState([]);
+    const [inputValue, setInputValue] = useState('');
+
+    const handleSubmit = e => {
+        e.preventDefault();
+
+        if(inputValue.trim()){
+            setTodo([...todo], inputValue);
+            setInputValue('');
+        }
+    }
+
+    const handleChange = () => {
+        
+    }
+
     return (
         <>
             <h1>A TO DO LIST</h1>
-            <form>
-                <input type='text' placeholder='Enter Your to do...'></input>
-                <button>Add</button>
+            <form onSubmit={handleSubmit}>
+                <input type='text' value={inputValue} onChange={handleChange} placeholder='Enter Your to do...'></input>
+                <button type='submit'>Add</button>
             </form>
+
+            <ul>
+                {todo.map((item, index) => (
+                    <li key={index}>{todo}</li>
+                ))}
+            </ul>
         </>
     )
 }
+
 
 export default Atodolist;
