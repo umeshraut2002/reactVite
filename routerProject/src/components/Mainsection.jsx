@@ -5,7 +5,7 @@ const Mainsection = () => {
     <div className="w-screen text-white bg-black">
       <section className="flex flex-col items-center p-10 space-y-6">
         <img
-          src="secondary-image.png"
+          src="https://images.pexels.com/photos/1779487/pexels-photo-1779487.jpeg?auto=compress&cs=tinysrgb&w=600"
           alt="Secondary"
           className="w-full max-w-4xl rounded-lg shadow-lg"
         />

@@ -14,7 +14,7 @@ const Herosection = () => {
                     </button>
                 </div>
                 <div className="mt-6 md:w-1/2 md:mt-0">
-                    <img src="hero-image.png" alt="Hero" className="w-full h-auto rounded-lg shadow-lg" />
+                    <img src="https://picsum.photos/id/1060/536/354?blur=2" alt="Hero" className="w-full h-auto rounded-lg shadow-lg" />
                 </div>
             </main>
         </div>
