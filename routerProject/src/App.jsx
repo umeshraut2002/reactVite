@@ -6,6 +6,7 @@ import Mainsection from './components/Mainsection';
 import Footer from './components/Footer';
 import About from './components/About';
 import Contact from './components/Contact';
+import Github from './components/Github';
 
 function App() {
   return(
@@ -16,6 +17,7 @@ function App() {
     <Footer />
     <About />
     <Contact />
+    <Github />
   </>
   );
 }
