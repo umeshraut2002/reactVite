@@ -5,6 +5,7 @@ import Herosection from './components/Herosection';
 import Mainsection from './components/Mainsection';
 import Footer from './components/Footer';
 import About from './components/About';
+import Contact from './components/Contact';
 
 function App() {
   return(
@@ -14,6 +15,7 @@ function App() {
     <Mainsection />
     <Footer />
     <About />
+    <Contact />
   </>
   );
 }
