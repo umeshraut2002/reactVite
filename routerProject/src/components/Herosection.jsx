@@ -2,7 +2,7 @@ import React from "react";
 
 const Herosection = () => {
     return (
-        <div className="w-screen h-screen text-white bg-black">
+        <div className="w-screen text-white bg-black">
             <main className="flex flex-col items-center justify-between p-10 md:flex-row">
                 <div className="space-y-4 md:w-1/2">
                     <h1 className="text-4xl font-bold text-orange-400 md:text-6xl">Build Your Future</h1>
