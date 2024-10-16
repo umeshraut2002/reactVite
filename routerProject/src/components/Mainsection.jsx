@@ -2,7 +2,7 @@ import React from "react";
 
 const Mainsection = () => {
   return (
-    <div className="w-screen h-screen text-white bg-black">
+    <div className="w-screen text-white bg-black">
       <section className="flex flex-col items-center p-10 space-y-6">
         <img
           src="secondary-image.png"
