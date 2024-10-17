@@ -8,7 +8,9 @@ const Navbar = () => {
                     <img src="logo.png" alt="Logo" className="h-10" />
                 </div>
                 <ul className="flex space-x-6 text-lg">
-                    <li className="cursor-pointer hover:text-orange-300">Home</li>
+                    <link
+                    className="cursor-pointer hover:text-orange-300" 
+                    >Home</link>
                     <li className="cursor-pointer hover:text-orange-300">About</li>
                     <li className="cursor-pointer hover:text-orange-300">Contact</li>
                     <li className="cursor-pointer hover:text-orange-300">GitHub</li>
