@@ -2,7 +2,7 @@ import React from "react";
 
 const Footer = () => {
   return (
-    <div className="w-screen text-white bg-black">
+    <div className="w-screen pb-0 mb-0 text-white bg-black">
       <footer className="p-10 text-gray-400 bg-gray-900">
         <div className="flex items-center justify-between">
           <img src="logo.png" alt="Footer Logo" className="h-10" />
