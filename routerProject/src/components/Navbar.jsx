@@ -1,4 +1,5 @@
 import React from "react";
+import { Link, NavLink } from 'react-router-dom'; // Corrected import
 
 const Navbar = () => {
     return (
@@ -8,10 +9,8 @@ const Navbar = () => {
                     <img src="logo.png" alt="Logo" className="h-10" />
                 </div>
                 <ul className="flex space-x-6 text-lg">
-                    <link
-                    className="cursor-pointer hover:text-orange-300" 
-                    >Home</link>
-                    <li className="cursor-pointer hover:text-orange-300">About</li>
+                    <li className="cursor-pointer hover:text-orange-300">Home</li> {/* Changed nav to li */}
+                    <li className="cursor-pointer hover:text-orange-300">About</li> {/* Removed extra /> */}
                     <li className="cursor-pointer hover:text-orange-300">Contact</li>
                     <li className="cursor-pointer hover:text-orange-300">GitHub</li>
                     <li className="cursor-pointer hover:text-orange-300">Log In</li>
@@ -20,9 +19,8 @@ const Navbar = () => {
                     Get Started
                 </button>
             </nav>
-
         </div>
-    )
-}
+    );
+};
 
 export default Navbar;
