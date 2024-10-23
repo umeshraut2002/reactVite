@@ -1,4 +1,5 @@
 import React from "react";
+import {Link, NavLink} from 'react-router-dom'
 
 const Navbar = () => {
     
@@ -14,11 +15,11 @@ const Navbar = () => {
                     <img src="logo.png" alt="Logo" className="h-10" />
                 </div>
                 <ul className="flex space-x-6 text-lg">
-                    <li className="cursor-pointer hover:text-orange-300">Home</li> {/* Changed nav to li */}
-                    <li className="cursor-pointer hover:text-orange-300">About</li> {/* Removed extra /> */}
-                    <li className="cursor-pointer hover:text-orange-300">Contact</li>
-                    <li className="cursor-pointer hover:text-orange-300">GitHub</li>
-                    <li className="cursor-pointer hover:text-orange-300">Log In</li>
+                    <li> <NavLink className={() => `cursor-pointer hover:text-orange-300`}> </NavLink> Home</li> 
+                    <li> <NavLink className={() => `cursor-pointer hover:text-orange-300`}> </NavLink> About</li> }
+                    <li> <NavLink className={() => `cursor-pointer hover:text-orange-300`}> </NavLink> Contact</li>
+                    <li> <NavLink className={() => `cursor-pointer hover:text-orange-300`}> </NavLink> GitHub</li>
+                    <li> <NavLink className={() => `cursor-pointer hover:text-orange-300`}> </NavLink> Log In</li>
                 </ul>
                 <button onClick={click} className="px-4 py-2 font-bold text-orange-500 bg-white rounded-lg hover:bg-gray-200">
                     Get Started
