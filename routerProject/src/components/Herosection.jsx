@@ -3,7 +3,8 @@ import React from "react";
 const Herosection = () => {
 
     const clickHandler = () => {
-        alert("Something is clicked ");
+        // window.location.href='https://play.google.com/store/apps/details?id=com.chaicode.courses';
+         window.open('https://play.google.com/store/apps/details?id=com.chaicode.courses')
     }
     
     return (
