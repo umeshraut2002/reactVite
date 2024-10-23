@@ -1,7 +1,12 @@
 import React from "react";
-import { Link, NavLink } from 'react-router-dom'; // Corrected import
 
 const Navbar = () => {
+    
+    const click = () => {
+        // window.Location.href='https://play.google.com/store/apps/details?id=com.chaicode.courses'
+        window.open('https://play.google.com/store/apps/details?id=com.chaicode.courses')
+    }
+    
     return (
         <div className="w-screen text-white bg-black">
             <nav className="flex items-center justify-between p-6 bg-orange-500 shadow-lg">
@@ -15,7 +20,7 @@ const Navbar = () => {
                     <li className="cursor-pointer hover:text-orange-300">GitHub</li>
                     <li className="cursor-pointer hover:text-orange-300">Log In</li>
                 </ul>
-                <button className="px-4 py-2 font-bold text-orange-500 bg-white rounded-lg hover:bg-gray-200">
+                <button onClick={click} className="px-4 py-2 font-bold text-orange-500 bg-white rounded-lg hover:bg-gray-200">
                     Get Started
                 </button>
             </nav>
