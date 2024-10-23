@@ -9,8 +9,6 @@ const Root = () => {
     return(
         <>
         <Navbar />
-        <Herosection />
-        <Mainsection />
         <Outlet />
         <Footer />
         </>
