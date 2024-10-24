@@ -9,6 +9,7 @@ import Github from './components/Github.jsx'
 import Login from './components/Login.jsx'
 import Navbar from './components/Navbar.jsx'
 import Footer from './components/Footer.jsx'
+import Herosection from './components/Herosection.jsx'
 
 const router = createBrowserRouter([
   {
@@ -17,7 +18,7 @@ const router = createBrowserRouter([
     children: [
       {
         path: "home",
-        element: ""
+        element: <Herosection />
       },
       {
         path: "about",
