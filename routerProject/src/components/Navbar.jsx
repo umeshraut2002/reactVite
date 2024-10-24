@@ -19,7 +19,7 @@ const Navbar = () => {
                         <NavLink
                             to='/home'
                             className={({ isActive }) =>
-                                `cursor-pointer ${isActive ? 'text-orange-300' : 'hover:text-orange-300'}`}
+                                `cursor-pointer ${isActive ? 'text-black' : 'hover:text-white'}`}
                         >
                         Home
                         </NavLink>
@@ -29,7 +29,7 @@ const Navbar = () => {
                         <NavLink
                             to='/about'
                             className={({ isActive }) =>
-                                `cursor-pointer ${isActive ? 'text-orange-300' : 'hover:text-orange-300'}`}
+                                `cursor-pointer ${isActive ? 'text-black' : 'hover:text-white'}`}
                         >
                         About
                         </NavLink>
@@ -39,7 +39,7 @@ const Navbar = () => {
                         <NavLink
                             to='/contact'
                             className={({ isActive }) =>
-                                `cursor-pointer ${isActive ? 'text-orange-300' : 'hover:text-orange-300'}`}
+                                `cursor-pointer ${isActive ? 'text-black' : 'hover:text-white'}`}
                         >
                         Contact
                         </NavLink>
@@ -49,7 +49,7 @@ const Navbar = () => {
                         <NavLink
                             to='/github'
                             className={({ isActive }) =>
-                                `cursor-pointer ${isActive ? 'text-orange-300' : 'hover:text-orange-300'}`}
+                                `cursor-pointer ${isActive ? 'text-black' : 'hover:text-white'}`}
                         >
                         Github
                         </NavLink>
@@ -59,7 +59,7 @@ const Navbar = () => {
                         <NavLink
                             to='/login'
                             className={({ isActive }) =>
-                                `cursor-pointer ${isActive ? 'text-orange-300' : 'hover:text-orange-300'}`}
+                                `cursor-pointer ${isActive ? 'text-black' : 'hover:text-white'}`}
                         >
                         Log In
                         </NavLink>
@@ -68,7 +68,7 @@ const Navbar = () => {
                         <NavLink
                             to='/user'
                             className={({ isActive }) =>
-                                `cursor-pointer ${isActive ? 'text-orange-300' : 'hover:text-orange-300'}`}
+                                `cursor-pointer ${isActive ? 'text-black' : 'hover:text-white'}`}
                         >
                         user
                         </NavLink>
