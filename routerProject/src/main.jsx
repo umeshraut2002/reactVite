@@ -5,7 +5,7 @@ import './index.css'
 import About from './components/About.jsx'
 import Root from './Root.jsx'
 import Contact from './components/Contact.jsx'
-import Github from './components/Github.jsx'
+import Github,{githubInfoLoader} from './components/Github.jsx'
 import Login from './components/Login.jsx'
 import Herosection from './components/Herosection.jsx'
 import User from './components/User.jsx'
@@ -29,7 +29,8 @@ const router = createBrowserRouter([
       },
       {
         path: "github",
-        element: <Github />
+        element: <Github />,
+        loader: githubInfoLoader
       },
       {
         path: "login",
