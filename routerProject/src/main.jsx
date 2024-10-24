@@ -7,8 +7,6 @@ import Root from './Root.jsx'
 import Contact from './components/Contact.jsx'
 import Github from './components/Github.jsx'
 import Login from './components/Login.jsx'
-import Navbar from './components/Navbar.jsx'
-import Footer from './components/Footer.jsx'
 import Herosection from './components/Herosection.jsx'
 
 const router = createBrowserRouter([
