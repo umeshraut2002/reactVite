@@ -7,6 +7,7 @@ import Footer from './components/Footer';
 import About from './components/About';
 import Contact from './components/Contact';
 import Github from './components/Github';
+import User from './components/User';
 
 function App() {
   return(
@@ -18,6 +19,7 @@ function App() {
     <About />
     <Contact />
     <Github />
+    <User />
   </>
   );
 }

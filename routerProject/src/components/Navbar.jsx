@@ -64,6 +64,15 @@ const Navbar = () => {
                         Log In
                         </NavLink>
                     </li>
+                    <li>
+                        <NavLink
+                            to='/user'
+                            className={({ isActive }) =>
+                                `cursor-pointer ${isActive ? 'text-orange-300' : 'hover:text-orange-300'}`}
+                        >
+                        user
+                        </NavLink>
+                    </li>
                 </ul>
                 <button onClick={click} className="px-4 py-2 font-bold text-orange-500 bg-white rounded-lg hover:bg-gray-200">
                     Get Started

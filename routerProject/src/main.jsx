@@ -8,6 +8,7 @@ import Contact from './components/Contact.jsx'
 import Github from './components/Github.jsx'
 import Login from './components/Login.jsx'
 import Herosection from './components/Herosection.jsx'
+import User from './components/User.jsx'
 
 const router = createBrowserRouter([
   {
@@ -33,6 +34,10 @@ const router = createBrowserRouter([
       {
         path: "login",
         element: <Login />
+      },
+      {
+        path: ":userid",
+        element: <User />
       }
     ]
   }
