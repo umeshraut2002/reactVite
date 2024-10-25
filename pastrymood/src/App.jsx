@@ -8,7 +8,7 @@ function App() {
 
   return (
    <>
-    <div className="text-gray-900 bg-white">
+    <div className="w-screen min-h-screen text-gray-900 bg-white">
       {/* Header */}
       <header className="flex items-center justify-between px-8 py-4 bg-yellow-500">
         <div className="text-3xl font-bold text-orange-600">CakeLogo</div>
@@ -34,7 +34,7 @@ function App() {
           </p>
         </div>
         <div className="w-1/2">
-          <img src="" />
+          <img src="https://images.pexels.com/photos/1055271/pexels-photo-1055271.jpeg?auto=compress&cs=tinysrgb&w=600"/>
         </div>
       </section>
 
