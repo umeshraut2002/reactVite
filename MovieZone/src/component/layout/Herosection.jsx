@@ -3,7 +3,7 @@ import React from "react";
 const Herosection = () => {
     return(
         <>
-        <section className="flex flex-col items-center justify-between w-screen p-8 bg-orange-800 lg:flex-row lg:p-16">
+        <section className="flex flex-col items-center justify-between w-screen p-8 bg-orange-800 lg:flex-row lg:p-16 ">
           {/* Hero Text */}
           <div className="text-center lg:w-1/2 lg:text-left">
             <h2 className="mb-4 text-5xl font-bold">Discover Amazing Movies</h2>
@@ -17,7 +17,7 @@ const Herosection = () => {
           </div>
           {/* Hero Slider (Image) */}
           <div className="mt-8 lg:w-1/2 lg:mt-0">
-            <img src="https://images.pexels.com/photos/7991163/pexels-photo-7991163.jpeg?auto=compress&cs=tinysrgb&w=600" />
+            <img src="https://images.pexels.com/photos/7991163/pexels-photo-7991163.jpeg?auto=compress&cs=tinysrgb&w=600" className="rounded-lg5" />
           </div>
         </section>
 
