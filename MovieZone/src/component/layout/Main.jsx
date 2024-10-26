@@ -23,7 +23,7 @@ const Main = () => {
                             </button>
                         </div>
 
-                        {/* Repeat similar cards for other movies */}
+                        
                         <div className="p-4 transition-shadow duration-300 bg-gray-900 rounded-lg shadow-lg hover:shadow-orange-500 flex flex-col items-center">
                             <img
                                 src="https://posters.movieposterdb.com/24_06/2024/11315808/l_joker-folie-a-deux-movie-poster_8b8497ec.jpg"
