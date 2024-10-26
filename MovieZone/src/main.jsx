@@ -1,12 +1,12 @@
-import { Children, StrictMode } from 'react'
+import {StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
 import './index.css'
 import {createBrowserRouter, RouterProvider} from 'react-router-dom';
-import Root from './Root';
-import Herosection from './component/layout/Herosection';
-import Main from './component/layout/Main';
-import About from './component/about/About';
-import Blog from './component/blog/Blog'
+import Root from './Root.jsx';
+import Herosection from './component/layout/Herosection.jsx';
+import Main from './component/layout/Main.jsx';
+import About from './component/about/About.jsx';
+import Blog from './component/blog/Blog.jsx'
 
 const router = createBrowserRouter([
   {
