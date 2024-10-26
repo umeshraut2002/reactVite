@@ -10,7 +10,7 @@ const Blog = () => {
                 {/* Blog Posts Grid */}
                 <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3">
                     {/* Example Blog Post Card */}
-                    {[...Array(9)].map((_, index) => (
+                    {[...Array(12)].map((_, index) => (
                         <div key={index} className="p-6 transition-shadow duration-300 bg-gray-900 rounded-lg shadow-lg hover:shadow-orange-500">
                             <img
                                 src={`https://example.com/review-image-${index + 1}.jpg`}
