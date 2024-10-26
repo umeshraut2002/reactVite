@@ -1,12 +1,10 @@
-import {StrictMode } from 'react'
-import { createRoot } from 'react-dom/client'
+import { StrictMode } from 'react'
+import React from 'react'
 import './index.css'
-import {createBrowserRouter, RouterProvider} from 'react-router-dom';
-import Root from './Root.jsx';
-import Herosection from './component/layout/Herosection.jsx';
-import Main from './component/layout/Main.jsx';
-import About from './component/about/About.jsx';
-import Blog from './component/blog/Blog.jsx'
+import { createRoot } from 'react-dom/client'
+import {RouterProvider,createBrowserRouter} from 'react-router-dom'
+import Root from './Root.jsx'
+import Herosection from './component/layout/Herosection.jsx'
 
 const router = createBrowserRouter([
   {
@@ -14,20 +12,8 @@ const router = createBrowserRouter([
     element: <Root />,
     children: [
       {
-        path: "home",
+        path:"home",
         element: <Herosection />
-      },
-      {
-        path: "home",
-        element: <Main />
-      },
-      { 
-        path: "about",
-        element: <About />
-      },
-      {
-        path: "blog",
-        element: <Blog />
       }
     ]
   }
@@ -35,6 +21,6 @@ const router = createBrowserRouter([
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
-    <RouterProvider router={router}/>
+    <RouterProvider router={router} />
   </StrictMode>,
-)
+);
