@@ -8,6 +8,7 @@ import Herosection from './component/layout/Herosection.jsx';
 import About from './component/about/About.jsx';
 import Blog from './component/blog/Blog.jsx';
 import Movies from './component/movies/Movies.jsx';
+import Contact from './component/contact/Contact.jsx';
 
 const router = createBrowserRouter([
   {
@@ -29,6 +30,10 @@ const router = createBrowserRouter([
       {
         path: "movies",
         element: <Movies />
+      },
+      {
+        path: "contact",
+        element: <Contact />
       }
     ]
   }
