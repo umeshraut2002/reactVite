@@ -4,11 +4,12 @@ import './index.css';
 import { createRoot } from 'react-dom/client';
 import {RouterProvider,createBrowserRouter} from 'react-router-dom';
 import Root from './Root.jsx';
-import Herosection from './component/layout/Herosection.jsx';
 import About from './component/about/About.jsx';
 import Blog from './component/blog/Blog.jsx';
 import Movies from './component/movies/Movies.jsx';
 import Contact from './component/contact/Contact.jsx';
+import Home from './component/Home/Home.jsx'
+
 
 const router = createBrowserRouter([
   {
@@ -16,8 +17,8 @@ const router = createBrowserRouter([
     element: <Root />,
     children: [
       {
-        path:"home",
-        element: <Herosection />
+        path: "/",
+        element: <Home />
       },
       {
         path: "about",
