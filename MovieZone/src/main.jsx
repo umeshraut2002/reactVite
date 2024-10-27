@@ -52,7 +52,9 @@ const router = createBrowserRouter(
       <Route path="blog" element={<Blog />} />
       <Route path="contact" element={<Contact />} />
       <Route path="movies" element={<Movies />} />
-      <Route path="user" element={<User />}
+      <Route path="user/" element={<User />} >
+        <Route path=":userid" element={<User />} />
+      </Route>
     </Route>
   )
 )
