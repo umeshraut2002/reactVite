@@ -13,9 +13,9 @@ const Movies = () => {
                     {[...Array(12)].map((_, index) => (
                         <div key={index} className="p-4 transition-shadow duration-300 bg-gray-900 rounded-lg shadow-lg hover:shadow-orange-500">
                             <img
-                                src={`https://example.com/movie-poster-${index + 1}.jpg`}
+                                src={`https://posters.movieposterdb.com/24_10/2024/31805297/l_kevin-hart-the-kennedy-center-mark-twain-prize-for-american-humor-movie-poster_db3dd057.jpg `}
                                 alt="Movie Poster"
-                                className="object-cover w-full h-64 mb-4 rounded-lg"
+                                className="w-full h-64 mb-4 rounded-lg "
                             />
                             <h3 className="mb-2 text-xl font-semibold">Movie Title {index + 1}</h3>
                             <p className="mb-2 text-gray-400">IMDb Rating: {Math.random().toFixed(1) * 10}</p>
