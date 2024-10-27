@@ -1,4 +1,4 @@
-import {useLoaderData} from 'react-router-dom'
+
 
 export const apiLoader = async () => {
     const response1 = await fetch('https://api.github.com/users/umeshraut2002');
