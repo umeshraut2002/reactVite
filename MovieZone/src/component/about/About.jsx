@@ -1,9 +1,26 @@
-import React from 'react';
+import { useEffect, useState } from 'react';
+import { Raatingloader} from '../loader/Raatingloader';
 
 const About = () => {
+
+    const [data, setData] = useState([]);
+
+    useEffect(() => {
+        const fetchdata = async () => {
+            try{
+                const responseData = await Raatingloader();
+                setData(responseData);
+            }
+            catch(error){
+                console.error("Fetching Data Error: ", error);
+            }
+        };
+        fetchdata();
+    }, [])
+
     return (
         <>
-            <div className="flex flex-col items-center min-h-screen px-6 py-16 text-white bg-black lg:px-16">
+            <div className="flex flex-col items-center min-h-screen px-6 py-16 text-white bg-black lg:px-16 ">
                 {/* Page Title */}
                 <h2 className="mb-8 text-5xl font-bold text-orange-600">About Us</h2>
 
@@ -36,14 +53,27 @@ const About = () => {
                 <p className="max-w-2xl mb-10 text-center text-gray-200">
                     A passionate team of developers and movie enthusiasts dedicated to creating the best experience for movie lovers.
                 </p>
-                <div className="grid w-full max-w-5xl grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3">
+                <div className="grid w-full max-w-5xl grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3 mx-auto justify-self-centre">
                     {/* Team Member Card */}
-                    <div className="p-6 text-center bg-gray-900 rounded-lg shadow-lg">
-                        <img src="team-member1.jpg" alt="Team Member 1" className="w-24 h-24 mx-auto mb-4 rounded-full" />
-                        <h4 className="text-xl font-semibold text-orange-500">John Doe</h4>
+                    <div className="p-6 text-center bg-gray-900 rounded-lg shadow-lg ">
+                        <img src={data.avatar_url} alt="Team Member 1" className="w-24 h-24 mx-auto mb-4 rounded-full" />
+                        <h4 className="text-xl font-semibold text-orange-500">{data.name}</h4>
                         <p className="text-gray-400">Lead Developer</p>
                     </div>
-                    {/* Repeat similar cards for other team members */}
+                    
+                    <div className="p-6 text-center bg-gray-900 rounded-lg shadow-lg">
+                        <img src={data.avatar_url} alt="Team Member 1" className="w-24 h-24 mx-auto mb-4 rounded-full" />
+                        <h4 className="text-xl font-semibold text-orange-500">{data.name}</h4>
+                        <h4 className="text-xl font-semibold text-orange-500">{}</h4>
+                        <p className="text-gray-400">Lead Developer</p>
+                    </div>
+
+                    <div className="p-6 text-center bg-gray-900 rounded-lg shadow-lg">
+                        <img src={data.avatar_url} alt="Team Member 1" className="w-24 h-24 mx-auto mb-4 rounded-full" />
+                        <h4 className="text-xl font-semibold text-orange-500">{data.name}</h4>
+                        <p className="text-gray-400">Lead Developer</p>
+                    </div>
+
                 </div>
             </div>
         </>
