@@ -63,6 +63,17 @@ const Header = () => {
               >
                 Contact
               </NavLink>
+              </li>
+
+              <li>
+              <NavLink 
+              to='/user'
+              className={({isActive}) =>
+              `cursor-pointer ${isActive ? 'text-black' : 'hover:text-white'}`
+              }
+              >
+              User
+              </NavLink>
             </li>
 
           </ul>
