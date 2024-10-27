@@ -9,6 +9,7 @@ import Blog from './component/blog/Blog.jsx';
 import Movies from './component/movies/Movies.jsx';
 import Contact from './component/contact/Contact.jsx';
 import Home from './component/Home/Home.jsx'
+import User from './component/user/User.jsx';
 
 
 // this is method one to route the element 
@@ -51,6 +52,7 @@ const router = createBrowserRouter(
       <Route path="blog" element={<Blog />} />
       <Route path="contact" element={<Contact />} />
       <Route path="movies" element={<Movies />} />
+      <Route path="user" element={<User />}
     </Route>
   )
 )
