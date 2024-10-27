@@ -1,6 +1,14 @@
 import React from 'react';
+import {useNavigate} from 'react-router-dom';
 
 const Main = () => {
+
+    const navigate = useNavigate(); // Navigation hook
+
+    const handleClick = () => {
+         navigate('/Movies');
+    }
+
     return (
         <>
             <div className="flex flex-col w-screen min-h-screen text-white bg-black">
@@ -102,7 +110,7 @@ const Main = () => {
                         
                     </div>
                     <div className='flex justify-center mt-10'>
-                    <button className="px-4 py-2 mt-10 text-white bg-orange-600 rounded-lg hover:bg-orange-800">
+                    <button onClick={handleClick} className="px-4 py-2 mt-10 text-white bg-orange-600 rounded-lg hover:bg-orange-800">
                                 Show More 
                             </button>
                             </div>
