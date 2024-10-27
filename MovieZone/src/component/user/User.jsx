@@ -7,8 +7,8 @@ const User = () => {
 
     return (
         <>
-            <div className='bg-gray-500 min-h-56 rounded-lg'>
-                <h1>User: {userid}</h1>
+            <div className='bg-gray-500 min-h-56 rounded-lg flex flex flex-col items-center'>
+                <h1 className='text-white bold italic mt-20'>User: {userid}</h1>
             </div>
         </>
     )
