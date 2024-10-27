@@ -58,13 +58,14 @@ const About = () => {
                     <div className="p-6 text-center bg-gray-900 rounded-lg shadow-lg ">
                         <img src={data.avatar_url} alt="Team Member 1" className="w-24 h-24 mx-auto mb-4 rounded-full" />
                         <h4 className="text-xl font-semibold text-orange-500">{data.name}</h4>
+                        <h4 className='text-xl font-semibold text-orange-500'>{}</h4>
                         <p className="text-gray-400">Lead Developer</p>
                     </div>
-                    
+{/*                     
                     <div className="p-6 text-center bg-gray-900 rounded-lg shadow-lg">
-                        <img src={data.avatar_url} alt="Team Member 1" className="w-24 h-24 mx-auto mb-4 rounded-full" />
-                        <h4 className="text-xl font-semibold text-orange-500">{data.name}</h4>
-                        <h4 className="text-xl font-semibold text-orange-500">{}</h4>
+                        <img src={data.following[0]} alt="Team Member 1" className="w-24 h-24 mx-auto mb-4 rounded-full" />
+                        <h4 className="text-xl font-semibold text-orange-500">{data.following[0].name}</h4>
+                        <h4 className="text-xl font-semibold text-orange-500">{data.foll}</h4>
                         <p className="text-gray-400">Lead Developer</p>
                     </div>
 
@@ -72,7 +73,7 @@ const About = () => {
                         <img src={data.avatar_url} alt="Team Member 1" className="w-24 h-24 mx-auto mb-4 rounded-full" />
                         <h4 className="text-xl font-semibold text-orange-500">{data.name}</h4>
                         <p className="text-gray-400">Lead Developer</p>
-                    </div>
+                    </div> */}
 
                 </div>
             </div>
