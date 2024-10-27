@@ -2,7 +2,7 @@ import { StrictMode } from 'react';
 import React from 'react';
 import './index.css';
 import { createRoot } from 'react-dom/client';
-import {Route, RouterProvider,createBrowserRouter, createRoutesFromElements} from 'react-router-dom';
+import {Route, RouterProvider, createBrowserRouter, createRoutesFromElements} from 'react-router-dom';
 import Root from './Root.jsx';
 import About from './component/about/About.jsx';
 import Blog from './component/blog/Blog.jsx';
@@ -41,14 +41,16 @@ import Home from './component/Home/Home.jsx'
 //   }
 // ])
 
-// this is method 2nd to routr the element 
+// another method routes the element 
 
 const router = createBrowserRouter(
   createRoutesFromElements(
-    <Route path= "/"  element= {<Root />}>
-      <Route path="home" element= {<Home />} />
-      <Route path="about" element= {<About />} />
-
+    <Route path="/" element={<Root />}>
+      <Route path="home" element={<Home />} />
+      <Route path="about" element={<About />} />
+      <Route path="blog" element={<Blog />} />
+      <Route path="contact" element={<Contact />} />
+      <Route path="movies" element={<Movies />} />
     </Route>
   )
 )
