@@ -7,7 +7,8 @@ const Profile = () => {
 
             if(!user) return <div>Please Log In</div>
 
-            return <div>Welcome: {user}</div>
+            return <div>Welcome: {user.username}</div>
+
 }
 
 export default Profile;
