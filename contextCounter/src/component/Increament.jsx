@@ -1,10 +1,14 @@
-import React from "react";
+import React, {useContext} from "react";
+import { CountContext } from "../context/CountContext";
 
 const Increament = () => {
+
+    const {count, setCount} = useContext(CountContext)
+
     return(
         <>
-            <h1>I Am Incrementar: </h1>
-            <button>Increment</button>
+            <h1>I Am Incrementar: {count}</h1>
+            {/* <button>Increment</button> */}
         </>
     )
 }

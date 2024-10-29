@@ -1,5 +1,3 @@
 import { createContext } from "react"
 
-const CountContext = createContext(0);
-
-export {CountContext};
+export const CountContext = createContext(0);

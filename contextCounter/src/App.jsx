@@ -3,13 +3,20 @@ import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
 import { CountContext } from './context/CountContext'
+import Decrement from './component/Decrement'
+import Increament from './component/Increament'
+import Squared from './component/Squared'
 
 function App() {
   const [count, setCount] = useState(0)
 
   return (
     <>
-    <CountContext.Provider value={count}>      <div>
+    <CountContext.Provider value={{count, setCount}}>
+    <Increament />
+    <Decrement />
+    <Squared />
+    <div>
         <a href="https://vite.dev" target="_blank">
           <img src={viteLogo} className="logo" alt="Vite logo" />
         </a>
