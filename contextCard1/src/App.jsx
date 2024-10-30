@@ -8,7 +8,7 @@ function App() {
     <>
     <div className="max-w-sm rounded-lg overflow-hidden shadow-lg border border-gray-200 p-4 bg-white transform transition-transform duration-300 hover:scale-105">
       <img 
-        src="https://via.placeholder.com/150" 
+        src="https://images.pexels.com/photos/1042143/pexels-photo-1042143.jpeg?auto=compress&cs=tinysrgb&w=600" 
         alt="Product" 
         className="w-full h-48 object-cover rounded-t-lg"
       />
