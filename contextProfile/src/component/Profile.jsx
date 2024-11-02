@@ -1,6 +1,14 @@
-import React from "react";
+
+import React,{useState, useContext} from "react";
+import { UserContext } from "../context/UserContext";
 
 const Profile = () => {
+
+    const [name, setName] = useState('');
+    const [age, setAge] = useState('');
+    const [location, setLoacation] = useState('');
+
+    const {user, setUser} = useContext(UserContext);
     return(
         <>
         <div className="flex flex-col items-center justify-center h-screen bg-gray-100 p-4">
