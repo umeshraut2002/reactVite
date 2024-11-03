@@ -1,12 +1,12 @@
-import React, {useState, useContext} from "react";
+import {useState, useContext} from "react";
 import { UserContext } from "../context/UserContext";
 
 
 const Profile = () => {
 
-    const [name, setName] = useState("John Doe");
-    const [age, setAge] = useState(30);
-    const [location, setLocation] = useState("India");   
+    const [name, setName] = useState("");
+    const [age, setAge] = useState(0);
+    const [location, setLocation] = useState("");   
     
     const {setUser} = useContext(UserContext);
 

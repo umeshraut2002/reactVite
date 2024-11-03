@@ -1,13 +1,9 @@
-import React, {useContext, useState} from 'react';
+import {useContext, useState} from 'react';
 import { UserContext } from '../context/UserContext';
 
 const Update = () => {
 
     const {user} = useContext(UserContext);
-    
-    const handleUpdate = () => {
-        user.age = 23;
-    }
 
     return(
         <>
@@ -25,15 +21,6 @@ const Update = () => {
                         <p className="mt-2 text-lg font-medium text-gray-800">
                             Location: <span className="text-orange-600">New York</span>
                         </p>
-                    </div>
-
-                    <div className="flex justify-between">
-                        <button onClick={handleUpdate} className="w-full px-4 py-2 font-medium text-white transition-colors duration-300 bg-orange-500 rounded-l-lg hover:bg-orange-600">
-                            Update Profile
-                        </button>
-                        {/* <button className="w-full px-4 py-2 font-medium text-gray-800 transition-colors duration-300 bg-gray-300 rounded-r-lg hover:bg-gray-400">
-                            Reset Profile
-                        </button> */}
                     </div>
                 </div>
                 </div>
