@@ -9,6 +9,14 @@ const Detail = () => {
     const [surname, setSurname] = useState("");
     const {setUser} = useContext(UserContext);
 
+    const handleSubmit = (e) => {
+        e.preventDefault();
+
+        if(name && surname){
+            setUser({name, surname});
+        }
+    }
+
     return(
         <>
         <div>
@@ -26,7 +34,7 @@ const Detail = () => {
                  placeholder="Enter Your Surname"
                  onChange={(e) => setSurname(e.target.value)}
             </div>
-            <button>Submit</button>
+            <button onClick={handleSubmit}>Submit</button>
         </div>
         </>
     )
