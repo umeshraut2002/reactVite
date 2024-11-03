@@ -4,7 +4,7 @@ import Show from './Show';
 
 const Info = () => {
 
-    const [name. setName] = useState("");
+    const [name, setName] = useState("");
     const [surname, setSurname] = useState("");
     const [age, setAge] = useState(0);
 
