@@ -1,8 +1,19 @@
-import React from "react";
-import UserContext from "../../../contextLogIn/src/context/UserContext";
+import React, {useState, useContext} from "react";
+import {UserContext} from "../../../contextLogIn/src/context/UserContext";
 
 
 const Profile = () => {
+
+    const [name, setName] = useState("John Doe");
+    const [age, setAge] = useState(30);
+    const [location, setLocation] = useState("India");   
+    
+    const {setUser} = useContext(UserContext);
+
+    const handleUpdate = () => {
+        setUser({name, age, location});
+    }
+
     return (
         <>
             <div className="flex flex-col items-center justify-center h-screen p-4 bg-gray-100">
@@ -22,12 +33,12 @@ const Profile = () => {
                     </div>
 
                     <div className="flex justify-between">
-                        <button className="w-full px-4 py-2 font-medium text-white transition-colors duration-300 bg-orange-500 rounded-l-lg hover:bg-orange-600">
+                        <button onClick={handleUpdate} className="w-full px-4 py-2 font-medium text-white transition-colors duration-300 bg-orange-500 rounded-l-lg hover:bg-orange-600">
                             Update Profile
                         </button>
-                        <button className="w-full px-4 py-2 font-medium text-gray-800 transition-colors duration-300 bg-gray-300 rounded-r-lg hover:bg-gray-400">
+                        {/* <button className="w-full px-4 py-2 font-medium text-gray-800 transition-colors duration-300 bg-gray-300 rounded-r-lg hover:bg-gray-400">
                             Reset Profile
-                        </button>
+                        </button> */}
                     </div>
                 </div>
                 </div>
