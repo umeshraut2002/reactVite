@@ -1,5 +1,5 @@
 import React, {useState, useContext} from "react";
-import {UserContext} from "../../../contextLogIn/src/context/UserContext";
+import { UserContext } from "../context/UserContext";
 
 
 const Profile = () => {
@@ -10,8 +10,12 @@ const Profile = () => {
     
     const {setUser} = useContext(UserContext);
 
-    const handleUpdate = () => {
-        setUser({name, age, location});
+    const handleUpdate = (e) => {
+        e.preventDefault();
+
+        if(name && age && location){
+            setUser({name, age, location, setName, setAge, setLocation});
+        }
     }
 
     return (

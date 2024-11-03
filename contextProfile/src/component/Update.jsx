@@ -1,5 +1,5 @@
 import React, {useContext, useState} from 'react';
-import UserContext from '../../../contextLogIn/src/context/UserContext';
+import { UserContext } from '../context/UserContext';
 
 const Update = () => {
 
