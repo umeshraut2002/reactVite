@@ -6,7 +6,7 @@ const Update  = () => {
     const {user} = useContext(UserContext);
 
     if(!user){
-        return <div><h2>PLease Enter Your Age</h2></div>
+        return <div><h2>Please Enter Your Age</h2></div>
     }
 
     else{
