@@ -1,73 +1,72 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
 import './App.css'
 
 function App() {
   return (
-  <div className="flex items-center justify-center min-h-screen text-gray-900 transition-colors bg-gray-100 dark:bg-gray-900 dark:text-white">
-    <div className="w-full max-w-md p-6 bg-white rounded-lg shadow-lg dark:bg-gray-800">
-      <h1 className="mb-6 text-2xl font-bold text-center">Manage Your Todos</h1>
-      
-      {/* Input Section */}
-      <div className="flex items-center mb-4">
-        <input
-          type="text"
-          placeholder="Write Todo..."
-          className="flex-grow p-2 border border-gray-300 rounded-l-lg dark:border-gray-700 focus:outline-none focus:ring-2 focus:ring-blue-500 dark:bg-gray-700 dark:text-white"
-        />
-        <button className="px-4 py-2 font-semibold text-white transition-colors bg-green-500 rounded-r-lg hover:bg-green-600">
-          Add
+    <div className="flex flex-col items-center justify-center w-screen h-screen px-4 text-white bg-gray-800">
+        {/* Dark Mode Toggle Button */}
+        <button className="px-6 py-3 mb-8 text-white bg-green-600 rounded-lg hover:bg-green-700">
+            Dark Mode
         </button>
-      </div>
 
-      {/* Todo Items */}
-      <div className="space-y-3">
-        <div className="flex items-center justify-between p-3 bg-gray-200 rounded-lg dark:bg-gray-700">
-          <span className="flex-grow">Learn DSA</span>
-          <div className="flex space-x-2">
-            <button className="p-1 text-blue-500 hover:text-blue-600">
-              ✏️
+        {/* Header */}
+        <h1 className="mb-8 text-3xl font-bold">Manage Your Todos</h1>
+
+        {/* Add Todo Form */}
+        <div className="flex w-full max-w-[600px] mb-6">
+            <input
+                type="text"
+                placeholder="Write Todo..."
+                className="w-full px-4 py-3 text-gray-800 bg-gray-100 border border-gray-300 rounded-l-lg outline-none"
+            />
+            <button className="px-6 py-3 text-white bg-green-600 rounded-r-lg">
+                Add
             </button>
-            <button className="p-1 text-red-500 hover:text-red-600">
-              ❌
-            </button>
-          </div>
-        </div>
-        
-        <div className="flex items-center justify-between p-3 bg-gray-200 rounded-lg dark:bg-gray-700">
-          <span className="flex-grow">Learn Node.js</span>
-          <div className="flex space-x-2">
-            <button className="p-1 text-blue-500 hover:text-blue-600">
-              ✏️
-            </button>
-            <button className="p-1 text-red-500 hover:text-red-600">
-              ❌
-            </button>
-          </div>
         </div>
 
-        <div className="flex items-center justify-between p-3 bg-gray-200 rounded-lg dark:bg-gray-700">
-          <span className="flex-grow">Learn React</span>
-          <div className="flex space-x-2">
-            <button className="p-1 text-blue-500 hover:text-blue-600">
-              ✏️
-            </button>
-            <button className="p-1 text-red-500 hover:text-red-600">
-              ❌
-            </button>
-          </div>
-        </div>
-      </div>
+        {/* Todo Items Container */}
+        <div className="w-full max-w-[600px] space-y-4 overflow-y-auto max-h-[60vh]">
+            {/* Todo Item */}
+            <div className="flex items-center px-4 py-3 bg-purple-100 border border-gray-300 rounded-lg shadow-sm gap-x-4">
+                {/* Checkbox */}
+                <input type="checkbox" className="w-6 h-6 cursor-pointer" />
 
-      {/* Dark Mode Toggle */}
-      <div className="mt-6 text-center">
-        <button className="px-4 py-2 font-semibold text-white transition-colors bg-blue-500 rounded-lg hover:bg-blue-600">
-          Toggle Dark Mode
-        </button>
-      </div>
+                {/* Todo Text */}
+                <input
+                    type="text"
+                    className="w-full px-2 py-1 text-gray-800 bg-transparent border rounded-lg outline-none"
+                    value="Sample Todo"
+                    readOnly
+                />
+
+                {/* Edit Button */}
+                <button className="inline-flex items-center justify-center w-10 h-10 text-sm bg-gray-100 border border-gray-300 rounded-lg hover:bg-gray-200">
+                    ✏️
+                </button>
+
+                {/* Delete Button */}
+                <button className="inline-flex items-center justify-center w-10 h-10 text-sm bg-gray-100 border border-gray-300 rounded-lg hover:bg-gray-200">
+                    ❌
+                </button>
+            </div>
+
+            {/* Repeat Todo Item for example layout */}
+            <div className="flex items-center px-4 py-3 bg-purple-100 border border-gray-300 rounded-lg shadow-sm gap-x-4">
+                <input type="checkbox" className="w-6 h-6 cursor-pointer" />
+                <input
+                    type="text"
+                    className="w-full px-2 py-1 text-gray-800 bg-transparent border rounded-lg outline-none"
+                    value="Another Todo"
+                    readOnly
+                />
+                <button className="inline-flex items-center justify-center w-10 h-10 text-sm bg-gray-100 border border-gray-300 rounded-lg hover:bg-gray-200">
+                    ✏️
+                </button>
+                <button className="inline-flex items-center justify-center w-10 h-10 text-sm bg-gray-100 border border-gray-300 rounded-lg hover:bg-gray-200">
+                    ❌
+                </button>
+            </div>
+        </div>
     </div>
-  </div>
 );
 }
 
