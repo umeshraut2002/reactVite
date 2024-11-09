@@ -1,11 +1,11 @@
 import React from 'react';
 
-const Counters = () => {
+const Counter1 = () => {
     return(
         <>
-
+        
         </>
     )
 }
 
-export default Counters;
+export default Counter1;

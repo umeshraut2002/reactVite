@@ -1,6 +1,6 @@
 import {createContext, useContext} from "react";
 
-export const countContext = createContext();
+export const countContext = createContext(0);
 
 export const contextProvider = countContext.Provider
 
