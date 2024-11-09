@@ -8,7 +8,7 @@ const Counter1 = () => {
     return(
         <>
         <div>
-            <h2>Counte is : {count * 2}</h2>
+            <h2>Counter 1 is X 2: {count * 2}</h2>
         </div>
         </>
     )

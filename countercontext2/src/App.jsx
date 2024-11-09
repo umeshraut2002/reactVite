@@ -2,6 +2,7 @@ import { useState } from 'react'
 import './App.css'
 import {CountProvider}  from './context/countContext'
 import Counter1 from './component/Counter1'
+import Counter2 from './component/Counter2'
 
 
 function App() {
@@ -11,6 +12,7 @@ function App() {
     <CountProvider value={{count, setCount}}>
       <div className="card">
       <Counter1 />
+      <Counter2 />
         <button onClick={() => setCount((count) => count + 1)}>
           count is {count}
         </button>
