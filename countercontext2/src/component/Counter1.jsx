@@ -5,14 +5,10 @@ const Counter1 = () => {
 
     const {count, setCount} = useCont();
 
-    const counter = () => {
-        setCount(count * 2)
-    }
-
     return(
         <>
         <div>
-            <h2>Counte is : {counter}</h2>
+            <h2>Counte is : {count * 2}</h2>
         </div>
         </>
     )

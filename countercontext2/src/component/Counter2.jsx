@@ -3,7 +3,7 @@ import Reaact from 'react'
 const Counter2 = () => {
     return(
         <>
-
+        
         </>
     )
 }
