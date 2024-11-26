@@ -8,4 +8,4 @@ const Counters1 = () => {
   )
 }
 
-export default Counters1
+export default Counters1;
