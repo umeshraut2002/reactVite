@@ -51,6 +51,8 @@ function App() {
                   <option value="electronics">Electronics</option>
                   <option value="fashion">Fashion</option>
                   <option value="grocery">Grocery</option>
+                  <option value="cloths">Cloths</option>
+                  
                 </select>
                 <label className="block mb-2">Select Time Frame:</label>
                 <input type="date" className="w-full p-2 border rounded" />
