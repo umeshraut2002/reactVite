@@ -8,8 +8,6 @@ import Main from "./component/layout/Main";
 import Footer from "./component/footer/Footer";
 
 function App() {
-  const [count, setCount] = useState(0);
-
   return (
     <>
     <Header />
